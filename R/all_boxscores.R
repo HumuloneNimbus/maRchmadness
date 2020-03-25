@@ -1,4 +1,4 @@
-#Uses ncaahoopR to retrieve boxscores for each team in a vector, then condenses them into one row per game, adding that row to a dataframe for that team. These dataframes are combined into a list for the given season.
+#Uses ncaahoopR to retrieve current season boxscores for each team in a vector, then condenses them into one row per game, adding that row to a dataframe for that team. These dataframes are combined into a list for the given season.
 
 #' @export
 all_boxscores <- function(team_list){
