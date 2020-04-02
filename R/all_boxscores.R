@@ -10,7 +10,12 @@ all_boxscores <- function(team_list, season){
   #Get Season stats for all teams in 'teams' vector
   for (i in teams)
   {
+    skip_game <- FALSE
+    if(skip_game){next}
+    tryCatch({
     games <- get_game_ids(i, season)
+    }, error = function(e){skip_game <<- TRUE})
+    if(skip_game){next}
     
     #Initialize list of games for this team, to be converted into a dataframe later
     game_list <- list()
